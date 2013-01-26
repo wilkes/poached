@@ -7,7 +7,8 @@
                  [compojure "1.1.5"]
                  [hiccup "1.0.2"]
                  [jayq "2.0.0"]
-                 [prismatic/dommy "0.0.1"]]
+                 [prismatic/dommy "0.0.1"]
+                 [ring/ring-jetty-adapter "1.1.8"]]
   :plugins [[lein-ring "0.8.2"]
             [lein-cljsbuild "0.3.0"]]
   :ring {:handler poached.server/app}
