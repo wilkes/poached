@@ -30,6 +30,7 @@
         console.dir = function() {};}")
     (include-css "/css/bootstrap.min.css"
                  "/css/bootstrap-responsive.min.css"
+                 "/css/font-awesome.min.css"
                  "/css/poached.css")]
    [:body
     [:div.navbar.navbar-inverse.navbar-fixed-top
@@ -47,7 +48,10 @@
          [:ul.nav.pull-right
           [:li.divider]
           [:li.active [:a {:href "/development"} "Development"]]
-          [:li [:a {:href "/production"} "Production"]]])]]]
+          [:li [:a {:href "/production"} "Production"]]])
+       [:ul.nav.pull-right
+        [:li  [:a {:href "https://github.com/wilkes/poached"}
+          "GitHub " [:i.icon-github.icon-large]]]]]]]
     [:div#main.container-fluid]
     (include-js "/js/jquery-1.8.1.min.js"
                 "/js/bootstrap.min.js"
