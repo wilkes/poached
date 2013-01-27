@@ -1,5 +1,7 @@
 var Bacon = {};
 
+jQuery.prototype.fn.asEventStream = function () {};
+
 Bacon.fromPromise = function() {};
 Bacon.noMore;
 Bacon.more;
@@ -72,5 +74,3 @@ Bacon.Property.prototype.or = function() {};
 Bacon.Property.prototype.decode = function() {};
 Bacon.Property.prototype.delay = function() {};
 Bacon.Property.prototype.throttle = function() {};
-
-jQuery.prototype.fn.asEventStream = function () {};

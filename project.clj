@@ -20,6 +20,7 @@
                :main {:source-paths ["src/poached/client"]
                       :compiler {:output-to "resources/public/js/main.js"
                                  :externs ["externs/jquery-1.8.js"
-                                           "externs/bootstrap.js"]
+                                           "externs/bootstrap.js"
+                                           "externs/bacon.js"]
                                  :optimizations :advanced
-                                 :pretty-print false}}}})
+                                 :pretty-print true}}}})

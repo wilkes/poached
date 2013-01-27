@@ -5,3 +5,6 @@
 
 (defn mousemove [$elem]
   (.asEventStream $elem "mousemove"))
+
+(defn click [$elem]
+  (.asEventStream $elem "click"))

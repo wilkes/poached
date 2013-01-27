@@ -42,8 +42,7 @@
          [:a.dropdown-toggle {:data-toggle "dropdown"}
           "Demos "
           [:b.caret]]
-         [:ul#demo-list.dropdown-menu
-          [:li [:a {:href "#"} "Placeholder"]]]]]
+         [:ul#demo-list.dropdown-menu]]]
        (if (dev? mode)
          [:ul.nav.pull-right
           [:li.divider]
