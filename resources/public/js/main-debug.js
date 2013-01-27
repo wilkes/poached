@@ -23791,26 +23791,26 @@ poached.client.fly.bind_letter = function bind_letter($content, letter, i) {
   var s = jayq.core.$.call(null, poached.client.fly.letter_span.call(null, letter));
   var stream = yolk.bacon.delay.call(null, poached.client.fly.mm, i * 50);
   jayq.core.append.call(null, $content, s);
-  yolk.bacon.on_value.call(null, yolk.bacon.map.call(null, stream, function(p1__13214_SHARP_) {
-    return p1__13214_SHARP_.clientX + i * 10 + 15
-  }), function(p1__13215_SHARP_) {
-    return jayq.core.css.call(null, s, cljs.core.ObjMap.fromObject(["\ufdd0'left"], {"\ufdd0'left":[cljs.core.str(p1__13215_SHARP_), cljs.core.str("px")].join("")}))
+  yolk.bacon.on_value.call(null, yolk.bacon.map.call(null, stream, function(p1__3014_SHARP_) {
+    return p1__3014_SHARP_.clientX + i * 10 + 15
+  }), function(p1__3015_SHARP_) {
+    return jayq.core.css.call(null, s, cljs.core.ObjMap.fromObject(["\ufdd0'left"], {"\ufdd0'left":[cljs.core.str(p1__3015_SHARP_), cljs.core.str("px")].join("")}))
   });
-  return yolk.bacon.on_value.call(null, yolk.bacon.map.call(null, stream, function(p1__13216_SHARP_) {
-    return p1__13216_SHARP_.clientY
-  }), function(p1__13217_SHARP_) {
-    return jayq.core.css.call(null, s, cljs.core.ObjMap.fromObject(["\ufdd0'top"], {"\ufdd0'top":[cljs.core.str(p1__13217_SHARP_), cljs.core.str("px")].join("")}))
+  return yolk.bacon.on_value.call(null, yolk.bacon.map.call(null, stream, function(p1__3016_SHARP_) {
+    return p1__3016_SHARP_.clientY
+  }), function(p1__3017_SHARP_) {
+    return jayq.core.css.call(null, s, cljs.core.ObjMap.fromObject(["\ufdd0'top"], {"\ufdd0'top":[cljs.core.str(p1__3017_SHARP_), cljs.core.str("px")].join("")}))
   })
 };
 poached.client.fly.initialize = function initialize($parent) {
   var text = "YOLK FLIES LIKE BACON";
-  var G__13219 = cljs.core.seq.call(null, cljs.core.range.call(null, 0, cljs.core.count.call(null, text)));
+  var G__3019 = cljs.core.seq.call(null, cljs.core.range.call(null, 0, cljs.core.count.call(null, text)));
   while(true) {
-    if(G__13219) {
-      var i = cljs.core.first.call(null, G__13219);
+    if(G__3019) {
+      var i = cljs.core.first.call(null, G__3019);
       poached.client.fly.bind_letter.call(null, $parent, cljs.core._lookup.call(null, text, i, null), i);
-      var G__13220 = cljs.core.next.call(null, G__13219);
-      G__13219 = G__13220;
+      var G__3020 = cljs.core.next.call(null, G__3019);
+      G__3019 = G__3020;
       continue
     }else {
       return null
