@@ -23,4 +23,4 @@
                                            "externs/bootstrap.js"
                                            "externs/bacon.js"]
                                  :optimizations :advanced
-                                 :pretty-print true}}}})
+                                 :pretty-print false}}}})
