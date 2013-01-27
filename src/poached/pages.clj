@@ -29,12 +29,21 @@
         console.log = function() {};
         console.dir = function() {};}")
     (include-css "/css/bootstrap.min.css"
-                 "/css/bootstrap-responsive.min.css")]
-   [:body {:style "padding-top: 60px;"}
+                 "/css/bootstrap-responsive.min.css"
+                 "/css/poached.css")]
+   [:body
     [:div.navbar.navbar-inverse.navbar-fixed-top
      [:div.navbar-inner
       [:div.container-fluid
        [:a.brand {:href "/"} "Poached"]
+       [:div.divider]
+       [:ul#demos.nav.pull-left
+        [:li.dropdown
+         [:a.dropdown-toggle {:data-toggle "dropdown"}
+          "Demos "
+          [:b.caret]]
+         [:ul#demo-list.dropdown-menu
+          [:li [:a {:href "#"} "Placeholder"]]]]]
        (if (dev? mode)
          [:ul.nav.pull-right
           [:li.divider]
