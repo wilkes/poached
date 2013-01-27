@@ -23791,26 +23791,26 @@ poached.client.fly.bind_letter = function bind_letter($content, letter, i) {
   var s = jayq.core.$.call(null, poached.client.fly.letter_span.call(null, letter));
   var stream = yolk.bacon.delay.call(null, poached.client.fly.mm, i * 50);
   jayq.core.append.call(null, $content, s);
-  yolk.bacon.on_value.call(null, yolk.bacon.map.call(null, stream, function(p1__5682_SHARP_) {
-    return p1__5682_SHARP_.clientX + i * 10 + 15
-  }), function(p1__5683_SHARP_) {
-    return jayq.core.css.call(null, s, cljs.core.ObjMap.fromObject(["\ufdd0'left"], {"\ufdd0'left":[cljs.core.str(p1__5683_SHARP_), cljs.core.str("px")].join("")}))
+  yolk.bacon.on_value.call(null, yolk.bacon.map.call(null, stream, function(p1__13214_SHARP_) {
+    return p1__13214_SHARP_.clientX + i * 10 + 15
+  }), function(p1__13215_SHARP_) {
+    return jayq.core.css.call(null, s, cljs.core.ObjMap.fromObject(["\ufdd0'left"], {"\ufdd0'left":[cljs.core.str(p1__13215_SHARP_), cljs.core.str("px")].join("")}))
   });
-  return yolk.bacon.on_value.call(null, yolk.bacon.map.call(null, stream, function(p1__5684_SHARP_) {
-    return p1__5684_SHARP_.clientY
-  }), function(p1__5685_SHARP_) {
-    return jayq.core.css.call(null, s, cljs.core.ObjMap.fromObject(["\ufdd0'top"], {"\ufdd0'top":[cljs.core.str(p1__5685_SHARP_), cljs.core.str("px")].join("")}))
+  return yolk.bacon.on_value.call(null, yolk.bacon.map.call(null, stream, function(p1__13216_SHARP_) {
+    return p1__13216_SHARP_.clientY
+  }), function(p1__13217_SHARP_) {
+    return jayq.core.css.call(null, s, cljs.core.ObjMap.fromObject(["\ufdd0'top"], {"\ufdd0'top":[cljs.core.str(p1__13217_SHARP_), cljs.core.str("px")].join("")}))
   })
 };
 poached.client.fly.initialize = function initialize($parent) {
   var text = "YOLK FLIES LIKE BACON";
-  var G__5687 = cljs.core.seq.call(null, cljs.core.range.call(null, 0, cljs.core.count.call(null, text)));
+  var G__13219 = cljs.core.seq.call(null, cljs.core.range.call(null, 0, cljs.core.count.call(null, text)));
   while(true) {
-    if(G__5687) {
-      var i = cljs.core.first.call(null, G__5687);
+    if(G__13219) {
+      var i = cljs.core.first.call(null, G__13219);
       poached.client.fly.bind_letter.call(null, $parent, cljs.core._lookup.call(null, text, i, null), i);
-      var G__5688 = cljs.core.next.call(null, G__5687);
-      G__5687 = G__5688;
+      var G__13220 = cljs.core.next.call(null, G__13219);
+      G__13219 = G__13220;
       continue
     }else {
       return null
@@ -23818,7 +23818,7 @@ poached.client.fly.initialize = function initialize($parent) {
     break
   }
 };
-goog.provide("poached.client.main");
+goog.provide("poached.client.jumbotron");
 goog.require("cljs.core");
 goog.require("dommy.template");
 goog.require("jayq.core");
@@ -23827,10 +23827,23 @@ goog.require("yolk.jquery");
 goog.require("yolk.bacon");
 goog.require("dommy.template");
 goog.require("jayq.core");
+poached.client.jumbotron.jumbotron = dommy.template.node.call(null, cljs.core.PersistentVector.fromArray(["\ufdd0'div.jumbotron", cljs.core.PersistentVector.fromArray(["\ufdd0'div.container-fluid.hero-unit", cljs.core.PersistentVector.fromArray(["\ufdd0'h1", "Poached"], true), cljs.core.PersistentVector.fromArray(["\ufdd0'p", cljs.core.PersistentVector.fromArray(["\ufdd0'blockquote", cljs.core.PersistentVector.fromArray(["\ufdd0'p.lead", "Seriously, that's like eggs 101, Woodhouse."], true), cljs.core.PersistentVector.fromArray(["\ufdd0'small", 
+"Archer"], true)], true)], true)], true)], true));
+poached.client.jumbotron.initialze = function initialze($parent) {
+  return jayq.core.append.call(null, $parent, poached.client.jumbotron.jumbotron)
+};
+goog.provide("poached.client.main");
+goog.require("cljs.core");
+goog.require("dommy.template");
+goog.require("jayq.core");
+goog.require("poached.client.fly");
+goog.require("poached.client.jumbotron");
+goog.require("yolk.jquery");
+goog.require("yolk.bacon");
+goog.require("dommy.template");
+goog.require("jayq.core");
 poached.client.main.$main = jayq.core.$.call(null, "\ufdd0'#main");
 poached.client.main.$demo_list = jayq.core.$.call(null, "\ufdd0'#demo-list");
-poached.client.main.jumbotron = dommy.template.node.call(null, cljs.core.PersistentVector.fromArray(["\ufdd0'div.jumbotron", cljs.core.PersistentVector.fromArray(["\ufdd0'div.container-fluid.hero-unit", cljs.core.PersistentVector.fromArray(["\ufdd0'h1", "Poached"], true), cljs.core.PersistentVector.fromArray(["\ufdd0'p", cljs.core.PersistentVector.fromArray(["\ufdd0'blockquote", cljs.core.PersistentVector.fromArray(["\ufdd0'p.lead", "Seriously, that's like eggs 101, Woodhouse."], true), cljs.core.PersistentVector.fromArray(["\ufdd0'small", 
-"Archer"], true)], true)], true)], true)], true));
 poached.client.main.demo_link = function demo_link(id, label) {
   return dommy.template.node.call(null, cljs.core.PersistentVector.fromArray(["\ufdd0'li", cljs.core.ObjMap.fromObject(["\ufdd0'id"], {"\ufdd0'id":id}), cljs.core.PersistentVector.fromArray(["\ufdd0'a", cljs.core.ObjMap.fromObject(["\ufdd0'href"], {"\ufdd0'href":"#"}), label], true)], true))
 };
@@ -23842,12 +23855,9 @@ poached.client.main.add_demo = function add_demo(id, label, display_fn) {
     return display_fn.call(null, poached.client.main.$main)
   })
 };
-poached.client.main.initialze = function initialze($parent) {
-  return jayq.core.append.call(null, $parent, poached.client.main.jumbotron)
-};
 poached.client.main.main = function main() {
-  poached.client.main.add_demo.call(null, "home", "Home", poached.client.main.initialze);
+  poached.client.main.add_demo.call(null, "jumbotron", "Jumbotron", poached.client.jumbotron.initialze);
   poached.client.main.add_demo.call(null, "fly", "Fly", poached.client.fly.initialize);
-  return poached.client.main.initialze.call(null, poached.client.main.$main)
+  return poached.client.jumbotron.initialze.call(null, poached.client.main.$main)
 };
 goog.exportSymbol("poached.client.main.main", poached.client.main.main);

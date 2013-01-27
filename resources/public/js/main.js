@@ -2313,10 +2313,10 @@ function we(a, b, c) {
   if(19 === b) {
     return a.cb ? a.cb(c, e, f, h, i, a, n, s, w, y, G, H, M, R, Q, ka, Da, Ma, sb) : a.cb ? a.cb(c, e, f, h, i, a, n, s, w, y, G, H, M, R, Q, ka, Da, Ma, sb) : a.call(j, c, e, f, h, i, a, n, s, w, y, G, H, M, R, Q, ka, Da, Ma, sb)
   }
-  var Ue = A(bd);
+  var Ve = A(bd);
   B(bd);
   if(20 === b) {
-    return a.eb ? a.eb(c, e, f, h, i, a, n, s, w, y, G, H, M, R, Q, ka, Da, Ma, sb, Ue) : a.eb ? a.eb(c, e, f, h, i, a, n, s, w, y, G, H, M, R, Q, ka, Da, Ma, sb, Ue) : a.call(j, c, e, f, h, i, a, n, s, w, y, G, H, M, R, Q, ka, Da, Ma, sb, Ue)
+    return a.eb ? a.eb(c, e, f, h, i, a, n, s, w, y, G, H, M, R, Q, ka, Da, Ma, sb, Ve) : a.eb ? a.eb(c, e, f, h, i, a, n, s, w, y, G, H, M, R, Q, ka, Da, Ma, sb, Ve) : a.call(j, c, e, f, h, i, a, n, s, w, y, G, H, M, R, Q, ka, Da, Ma, sb, Ve)
   }
   d(Error("Only up to 20 arguments supported on functions"))
 }
@@ -2514,7 +2514,7 @@ function Te(a) {
     return P(a, Se.b(a))
   }, j)
 }
-function Ve(a, b) {
+function Ue(a, b) {
   return Oe(a, Se.b(b))
 }
 Se = function(a, b) {
@@ -2522,12 +2522,12 @@ Se = function(a, b) {
     case 1:
       return Te.call(this, a);
     case 2:
-      return Ve.call(this, a, b)
+      return Ue.call(this, a, b)
   }
   d(Error("Invalid arity: " + arguments.length))
 };
 Se.b = Te;
-Se.a = Ve;
+Se.a = Ue;
 Re = Se;
 var We, Xe = j;
 function Ye(a, b) {
@@ -5940,22 +5940,23 @@ function Dj(a) {
     }
   }
 }
-;var Ej = rj.b("\ufdd0'#main"), Fj = rj.b("\ufdd0'#demo-list"), Gj = xi(V(["\ufdd0'div.jumbotron", V(["\ufdd0'div.container-fluid.hero-unit", V(["\ufdd0'h1", "Poached"]), V(["\ufdd0'p", V(["\ufdd0'blockquote", V(["\ufdd0'p.lead", "Seriously, that's like eggs 101, Woodhouse."]), V(["\ufdd0'small", "Archer"])])])])]));
-function Hj(a, b, c) {
+;var Ej = xi(V(["\ufdd0'div.jumbotron", V(["\ufdd0'div.container-fluid.hero-unit", V(["\ufdd0'h1", "Poached"]), V(["\ufdd0'p", V(["\ufdd0'blockquote", V(["\ufdd0'p.lead", "Seriously, that's like eggs 101, Woodhouse."]), V(["\ufdd0'small", "Archer"])])])])]));
+function Fj(a) {
+  return a.append(Ej)
+}
+;var Gj = rj.b("\ufdd0'#main"), Hj = rj.b("\ufdd0'#demo-list");
+function Ij(a, b, c) {
   a = rj.b(xi(V(["\ufdd0'li", ag(["\ufdd0'id"], {"\ufdd0'id":a}), V(["\ufdd0'a", ag(["\ufdd0'href"], {"\ufdd0'href":"#"}), b])])));
-  Fj.append(a);
+  Hj.append(a);
   rj.a("a", a).asEventStream("click").onValue(function() {
-    Ej.empty();
-    return c.b ? c.b(Ej) : c.call(j, Ej)
+    Gj.empty();
+    return c.b ? c.b(Gj) : c.call(j, Gj)
   })
 }
-function Ij(a) {
-  return a.append(Gj)
-}
 function Jj() {
-  Hj("home", "Home", Ij);
-  Hj("fly", "Fly", Dj);
-  return Ij(Ej)
+  Ij("jumbotron", "Jumbotron", Fj);
+  Ij("fly", "Fly", Dj);
+  return Fj.b ? Fj.b(Gj) : Fj.call(j, Gj)
 }
 var Kj = ["poached", "client", "main", "main"], Lj = this;
 !(Kj[0] in Lj) && Lj.execScript && Lj.execScript("var " + Kj[0]);
