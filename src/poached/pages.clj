@@ -50,6 +50,7 @@
           [:li.active [:a {:href "/development"} "Development"]]
           [:li [:a {:href "/production"} "Production"]]])]]]
     [:div#main.container-fluid]
-    (include-js "/js/jquery-1.8.1.min.js")
-    (include-js "/js/bootstrap.min.js")
+    (include-js "/js/jquery-1.8.1.min.js"
+                "/js/bootstrap.min.js"
+                "/js/Bacon.js")
     (app-js (str "main" (if (dev? mode) "-debug" "")))]))
